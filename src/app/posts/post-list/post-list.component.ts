@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { getCounter } from 'src/app/counter/state/counter.selectors';
 import { AppState } from 'src/app/store/app.state';
 import { Post } from '../../modals/post.modal';
+import { deletePost } from '../state/post.actions';
 import { getPosts } from '../state/post.selector';
 
 @Component({
@@ -20,4 +20,10 @@ export class PostListComponent implements OnInit {
     this.posts = this.store.select(getPosts);
   }
 
+  onDeletePost(id: any) {
+    console.log('id', id)
+    if(confirm("Are you sure you want to delete?")) {
+      this.store.dispatch(deletePost({ id }));
+    }
+  }
 }
