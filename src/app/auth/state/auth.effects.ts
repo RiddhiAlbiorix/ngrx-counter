@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { act, Actions, createEffect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { autoLogin, autoLogout, loginStart, loginSuccess, signupStart, signupSuccess } from './auth.actions';
 import { exhaustMap, map, catchError, tap, mergeMap } from 'rxjs/operators';
 import { AuthService } from 'src/app/service/auth.service';
@@ -21,7 +21,7 @@ export class AuthEffects {
     private router: Router
   ) { }
 
-  login$ = createEffect(() => {
+  login$ = createEffect(() => {    
     return this.actions$.pipe(
       ofType(loginStart),
       exhaustMap((action) => {

@@ -13,10 +13,10 @@
 			</div>
 			<div class="mb-3">
 				<label>Description</label>
-				<textarea class="form-control" formControlName="description"></textarea>
-				<div *ngIf="f.description.touched && f.description.invalid" class="alert alert-danger">
-					<div *ngIf="f.description.errors?.required">Description is required.</div>
-					<div *ngIf="f.description.errors?.minlength">Descriptione should be 10 character.</div>
+				<textarea class="form-control" formControlName="body"></textarea>
+				<div *ngIf="f.body.touched && f.body.invalid" class="alert alert-danger">
+					<div *ngIf="f.body.errors?.required">Description is required.</div>
+					<div *ngIf="f.body.errors?.minlength">Description should be 10 character.</div>
 				</div>
 			</div>
 			<div class="my-3">

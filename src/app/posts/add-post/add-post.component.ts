@@ -22,7 +22,7 @@ export class AddPostComponent implements OnInit {
         Validators.required,
         Validators.minLength(6),
       ]),
-      description: new FormControl(null, [
+      body: new FormControl(null, [
         Validators.required,
         Validators.minLength(10),
       ]),
@@ -40,7 +40,7 @@ export class AddPostComponent implements OnInit {
 
     const post: Post = {
       title : this.postForm.value.title,
-      description : this.postForm.value.description
+      body : this.postForm.value.body
     }
 
     this.store.dispatch(addPost({ post }))

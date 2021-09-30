@@ -6,4 +6,9 @@ export class User {
     private username: string) {
 
   }
+
+  get userToken() {    
+    return this.token;
+  }
 }
+
