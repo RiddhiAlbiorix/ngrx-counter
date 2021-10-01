@@ -8,6 +8,7 @@ const BASE_URL = 'https://jsonplaceholder.typicode.com/posts';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PostsService {
 
   constructor(

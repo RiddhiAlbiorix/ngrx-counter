@@ -11,6 +11,7 @@ import { getErrorMessage, getLoading } from './store/shared/shared.selector';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  
   title = 'ngrx-counter';
   showLoading!: Observable<boolean>;
   errorMessage!: Observable<string>;

@@ -52,8 +52,6 @@ export class AuthService {
 
   setUserInLocalStorage(user: User) {
     localStorage.setItem('userData', JSON.stringify(user));
-
-    // const todaysDate = new Date().
   }
 
   getUserFromLocalStorage() {
